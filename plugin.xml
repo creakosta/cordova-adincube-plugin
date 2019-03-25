@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-adincube" version="2.6.3">
+        <name>AdinCubeSDK</name>
+        <description>AdinCube SDK for PhoneGap/Cordova</description>
+        <keywords>adincube</keywords>
+
+        <dependency id="cordova-plugin-device"/>
+
+        <js-module name="AdinCubeBridge" src="www/adincubebridge.js"/>
+        <js-module name="AdinCube" src="www/adincube.js">
+            <clobbers target="adincube"/>
+        </js-module>
+
+        <engines>
+            <engine name="cordova-ios" version="&gt;=4.0.0"/>
+            <engine name="android-sdk" version="&gt;=28"/>
+            <engine name="apple-ios" version="&gt;=10"/>
+        </engines>
+
+        <platform name="android">
+            <!-- Configuration of classes used to bind our Javascript SDK calls to Java SDK calls -->
+            <config-file parent="/*" target="config.xml">
+                <feature name="AdinCubeBridge">
+                    <param name="android-package" value="com.adincube.sdk.AdinCubeBridge"/>
+                </feature>
+            </config-file>
+
+            <framework custom="true" src="src/android/build.gradle" type="gradleReference"/>
+
+            <hook src="src/cordova/editMultidexApplicationInManifest.js" type="before_prepare"/>
+        </platform>
+
+        <platform name="ios">
+            <!-- Configuration of classes used to bind our Javascript SDK calls to Objective-C SDK calls -->
+            <config-file parent="/*" target="config.xml">
+                <feature name="AdinCubeBridge">
+                    <param name="ios-package" value="AdinCubeBridge"/>
+                </feature>
+            </config-file>
+
+            <config-file parent="NSCalendarsUsageDescription" platform="ios" target="*-Info.plist">
+                <string>Adding events</string>
+            </config-file>
+            <config-file parent="NSPhotoLibraryUsageDescription" platform="ios" target="*-Info.plist">
+                <string>Taking pictures</string>
+            </config-file>
+            <config-file parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
+                <string>Taking pictures</string>
+            </config-file>
+            <config-file parent="NSMotionUsageDescription" platform="ios" target="*-Info.plist">
+                <string>Interactive ad controls</string>
+            </config-file>
+            
+            <header-file src="src/ios/AdinCubeBridge.h"/>
+            <header-file src="src/ios/ContextAwareAdinCubeDelegate.h"/>
+            <header-file src="src/ios/ContextAwareAdinCubeInterstitialDelegate.h"/>
+            <header-file src="src/ios/ContextAwareAdinCubeBannerDelegate.h"/>
+            <header-file src="src/ios/ContextAwareAdinCubeRewardedDelegate.h"/>
+            <header-file src="src/ios/ContextAwareAdinCubeUserConsentDelegate.h"/>
+
+            <source-file src="src/ios/AdinCubeBridge.m"/>
+            <source-file src="src/ios/ContextAwareAdinCubeDelegate.m"/>
+            <source-file src="src/ios/ContextAwareAdinCubeInterstitialDelegate.m"/>
+            <source-file src="src/ios/ContextAwareAdinCubeBannerDelegate.m"/>
+            <source-file src="src/ios/ContextAwareAdinCubeRewardedDelegate.m"/>
+            <source-file src="src/ios/ContextAwareAdinCubeUserConsentDelegate.m"/>
+
+            <source-file framework="true" src="libs/ios/libAdinCube.a"/>
+        <header-file src="src/ios/AdinCube/AdinCube.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeAdChoicesView.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeBanner.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeBannerDelegate.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeBannerImpl.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeBannerView.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeErrors.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeInterstitial.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeInterstitialDelegate.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeNative.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeNativeAd.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeNativeAdIconView.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeNativeAdMediaView.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeNativeAdOptions.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeNativeAdOptionsBuilder.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeNativeDelegate.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeNativeLoadingPool.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeRewarded.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeRewardedDelegate.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeUserConsent.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeUserConsentDelegate.h"/>
+<header-file src="src/ios/AdinCube/AdinCubeUserInfo.h"/>
+<header-file src="src/ios/AdinCube/NativeAd/AICNativeAdCollectionViewAdapter.h" target-dir="NativeAd"/>
+<header-file src="src/ios/AdinCube/NativeAd/AICNativeAdLoadingPrioritySetter.h" target-dir="NativeAd"/>
+<header-file src="src/ios/AdinCube/NativeAd/AICNativeAdStreamPositions.h" target-dir="NativeAd"/>
+<header-file src="src/ios/AdinCube/NativeAd/AICNativeAdStreamPositionsBuilder.h" target-dir="NativeAd"/>
+<header-file src="src/ios/AdinCube/NativeAd/AICNativeAdTableViewAdapter.h" target-dir="NativeAd"/>
+<header-file src="src/ios/AdinCube/NativeAd/AICNativeAdViewBinding.h" target-dir="NativeAd"/>
+<header-file src="src/ios/AdinCube/NativeAd/AICNativeAdWrapper.h" target-dir="NativeAd"/>
+<header-file src="src/ios/AdinCube/NativeAd/AICNativeAdWrapperLoadingPool.h" target-dir="NativeAd"/>
+<resource-file src="res/ios/MoPub/MPAdBrowserController.xib"/>
+<resource-file src="res/ios/MoPub/MPCloseBtn.png"/>
+<resource-file src="res/ios/MoPub/MPCloseBtn@2x.png"/>
+<resource-file src="res/ios/MoPub/MPCloseBtn@3x.png"/>
+<resource-file src="res/ios/MoPub/MPCloseButtonX.png"/>
+<resource-file src="res/ios/MoPub/MPCloseButtonX@2x.png"/>
+<resource-file src="res/ios/MoPub/MPCloseButtonX@3x.png"/>
+<resource-file src="res/ios/MoPub/MPCountdownTimer.html"/>
+<resource-file src="res/ios/MoPub/MPDAAIcon.png"/>
+<resource-file src="res/ios/MoPub/MPDAAIcon@2x.png"/>
+<resource-file src="res/ios/MoPub/MPDAAIcon@3x.png"/>
+<resource-file src="res/ios/MoPub/MPMutedBtn.png"/>
+<resource-file src="res/ios/MoPub/MPMutedBtn@2x.png"/>
+<resource-file src="res/ios/MoPub/MPMutedBtn@3x.png"/>
+<resource-file src="res/ios/MoPub/MPPlayBtn.png"/>
+<resource-file src="res/ios/MoPub/MPPlayBtn@2x.png"/>
+<resource-file src="res/ios/MoPub/MPPlayBtn@3x.png"/>
+<resource-file src="res/ios/MoPub/MPUnmutedBtn.png"/>
+<resource-file src="res/ios/MoPub/MPUnmutedBtn@2x.png"/>
+<resource-file src="res/ios/MoPub/MPUnmutedBtn@3x.png"/>
+<resource-file src="res/ios/MoPub/MRAID.bundle"/>
+<resource-file src="res/ios/Tapjoy/TapjoyResources.bundle"/>
+<framework src="AVFoundation.framework"/>
+<framework src="AdSupport.framework"/>
+<framework src="AudioToolbox.framework"/>
+<framework src="CFNetwork.framework"/>
+<framework src="CoreData.framework"/>
+<framework src="CoreGraphics.framework"/>
+<framework src="CoreImage.framework"/>
+<framework src="CoreLocation.framework"/>
+<framework src="CoreMedia.framework"/>
+<framework src="CoreMotion.framework"/>
+<framework src="CoreTelephony.framework"/>
+<framework src="CoreVideo.framework"/>
+<framework src="EventKit.framework"/>
+<framework src="EventKitUI.framework"/>
+<framework src="Foundation.framework"/>
+<framework src="GLKit.framework"/>
+<framework src="ImageIO.framework"/>
+<framework src="JavaScriptCore.framework"/>
+<framework src="MapKit.framework"/>
+<framework src="MediaPlayer.framework"/>
+<framework src="MessageUI.framework"/>
+<framework src="MobileCoreServices.framework"/>
+<framework src="OpenGLES.framework"/>
+<framework src="QuartzCore.framework"/>
+<framework src="SafariServices.framework"/>
+<framework src="Security.framework"/>
+<framework src="StoreKit.framework"/>
+<framework src="SystemConfiguration.framework"/>
+<framework src="UIKit.framework"/>
+<framework src="WebKit.framework"/>
+<framework src="Social.framework" weak="true"/>
+<framework src="VideoToolbox.framework" weak="true"/>
+<framework src="WatchConnectivity.framework" weak="true"/>
+<framework src="libc++.tbd"/>
+<framework src="libsqlite3.tbd"/>
+<framework src="libsqlite3.0.tbd"/>
+<framework src="libxml2.tbd"/>
+<framework src="libz.tbd"/>
+</platform>
+    </plugin>

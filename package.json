@@ -1,0 +1,1 @@
+{"name":"cordova-plugin-adincube","description":"AdinCube SDK for PhoneGap/Cordova","cordova":{"id":"cordova-plugin-adincube","platforms":["android","ios"]},"dependencies":{"cordova-plugin-device":">1.0.0"},"keywords":["ad","mediation","adincube","ecosystem:cordova","cordova-android","cordova-ios"],"author":"AdinCube","version":"2.6.3"}
