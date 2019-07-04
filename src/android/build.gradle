@@ -19,5 +19,4 @@ dependencies {
 	compile 'com.adincube.sdk:AdinCube-Cordova-core:2.6.3'
 	compile 'com.adincube.partner:admob:11.4.0'
 	compile 'com.adincube.partner:tapjoy:11.12.2'
-	compile 'com.adincube.partner:chartboost:7.2.1'
 }
