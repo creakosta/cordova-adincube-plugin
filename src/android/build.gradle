@@ -1,7 +1,10 @@
 android {
 	defaultConfig {
-		multiDexEnabled false
+		multiDexEnabled true
 	}
+	dexOptions {
+        preDexLibraries = false
+        }
 }
 repositories {
 	maven {
