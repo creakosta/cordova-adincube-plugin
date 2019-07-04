@@ -26,8 +26,7 @@
             </config-file>
 
             <framework custom="true" src="src/android/build.gradle" type="gradleReference"/>
-
-            <hook src="src/cordova/editMultidexApplicationInManifest.js" type="before_prepare"/>
+                
         </platform>
 
         <platform name="ios">
