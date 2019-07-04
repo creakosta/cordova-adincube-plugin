@@ -1,6 +1,6 @@
 android {
 	defaultConfig {
-		multiDexEnabled true
+		multiDexEnabled false
 	}
 }
 repositories {
@@ -13,9 +13,7 @@ repositories {
 	jcenter()
 }
 dependencies {
-	compile 'com.android.support:multidex:1.0.1'
 	compile 'com.adincube.sdk:AdinCube-Cordova-core:2.6.3'
-	compile 'com.adincube.partner:adcolony:3.3.7'
 	compile 'com.adincube.partner:admob:11.4.0'
 	compile 'com.adincube.partner:aerserv:3.1.1'
 	compile 'com.adincube.partner:amazon:5.8.2'
