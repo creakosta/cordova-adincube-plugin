@@ -16,4 +16,5 @@ dependencies {
 	compile 'com.adincube.sdk:AdinCube-Cordova-core:2.8.15'
 	compile 'com.adincube.partner:admob:11.4.0'
 	compile 'co.ogury:consent-manager:1.1.7'
+	compile 'com.adincube.cordova-sdk:applovin:2.8.15'
 }
