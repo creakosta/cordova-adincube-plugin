@@ -15,10 +15,8 @@ repositories {
 dependencies {
 	compile 'com.adincube.sdk:AdinCube-Cordova-core:2.6.3'
 	compile 'com.adincube.partner:admob:11.4.0'
-	compile 'com.adincube.partner:aerserv:3.1.1'
 	compile 'com.adincube.partner:amazon:5.8.2'
 	compile 'com.adincube.partner:applovin:9.2.1'
-	compile 'com.adincube.partner:appnext:2.3.1.471-3'
 	compile 'com.adincube.partner:chartboost:7.2.1'
 	compile 'com.adincube.partner:doubleclick:11.4.0'
 	compile 'com.adincube.partner:facebook:5.1.0'
