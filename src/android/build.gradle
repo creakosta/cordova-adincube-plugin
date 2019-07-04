@@ -16,6 +16,5 @@ dependencies {
 	compile 'com.adincube.sdk:AdinCube-Cordova-core:2.6.3'
 	compile 'com.adincube.partner:admob:11.4.0'
 	compile 'com.adincube.partner:applovin:9.2.1'
-	compile 'com.adincube.sdk:od-support:3.0.19'
 	compile 'com.adincube.partner:unity:2.2.1'
 }
