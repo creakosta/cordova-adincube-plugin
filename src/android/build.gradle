@@ -14,5 +14,5 @@ repositories {
 }
 dependencies {
 	compile 'com.adincube.sdk:AdinCube-Cordova-core:2.6.3'
-	compile 'com.adincube.partner:admob:11.4.0'
+	compile 'com.adincube.partner:admob:9.0.2'
 }
