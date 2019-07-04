@@ -5,6 +5,9 @@ android {
 	dexOptions {
         preDexLibraries = false
         }
+	configurations {
+        all*.exclude module: 'play-services-awareness'
+        }
 }
 repositories {
 	maven {
