@@ -16,8 +16,8 @@ repositories {
 	jcenter()
 }
 dependencies {
-	compile 'com.adincube.sdk:AdinCube-Cordova-core:2.6.3'
-	compile 'com.adincube.partner:admob:11.4.0'
-	compile 'com.adincube.partner:tapjoy:11.12.2'
-	compile 'com.adincube.partner:unity:2.2.1'
+	compile 'com.android.support:multidex:1.0.1'
+	compile 'com.adincube.sdk:AdinCube-Cordova-core:2.8.15'
+	compile 'com.adincube.cordova-sdk:admob:2.8.15'
+	compile 'co.ogury:consent-manager:1.1.7'
 }
