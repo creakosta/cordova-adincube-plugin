@@ -20,4 +20,7 @@ dependencies {
 	compile 'com.adincube.sdk:AdinCube-Cordova-core:2.8.15'
 	compile 'com.adincube.cordova-sdk:admob:2.8.15'
 	compile 'co.ogury:consent-manager:1.1.7'
+	compile 'com.adincube.sdk:od-support:4.2.4'
+	compile 'com.adincube.cordova-sdk:tapjoy:2.8.15'
+	compile 'com.adincube.cordova-sdk:unityads:2.8.15'
 }
