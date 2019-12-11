@@ -3,7 +3,8 @@ android {
 		multiDexEnabled true
 	}
 	dexOptions {
-        preDexLibraries = false
+	        javaMaxHeapSize "4g"
+                preDexLibraries = false
         }
 }
 repositories {
