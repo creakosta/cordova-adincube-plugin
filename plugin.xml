@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-adincube" version="2.9.8">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-adincube" version="2.9.11">
         <name>AdinCubeSDK</name>
         <description>AdinCube SDK for PhoneGap/Cordova</description>
         <keywords>adincube</keywords>
