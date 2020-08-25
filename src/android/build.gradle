@@ -22,6 +22,5 @@ dependencies {
 	compile 'com.adincube.cordova-sdk:unityads:2.9.11'
 	compile 'com.adincube.cordova-sdk:admob:2.9.11'
 	compile 'com.adincube.cordova-sdk:adcolony:2.9.11'
-	compile 'com.adincube.cordova-sdk:chartboost:2.9.11'
 	compile 'com.adincube.cordova-sdk:ironsource:2.9.11'
 }
